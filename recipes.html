@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Ingredia Recipes</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:-apple-system,BlinkMacSystemFont,sans-serif;
+
+      background:
+        radial-gradient(circle at top left,
+          rgba(255,140,70,0.18),
+          transparent 30%),
+
+        linear-gradient(
+          135deg,
+          #fff8f1,
+          #fff4eb
+        );
+
+      color:#111;
+
+      min-height:100vh;
+
+      padding:40px;
+    }
+
+    .topbar{
+      width:100%;
+      max-width:1400px;
+
+      margin:auto;
+      margin-bottom:70px;
+
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    .logo{
+      width:180px;
+    }
+
+    .back-btn{
+      background:white;
+
+      padding:14px 22px;
+
+      border-radius:18px;
+
+      text-decoration:none;
+
+      color:#111;
+
+      font-weight:600;
+
+      box-shadow:
+        0 5px 18px rgba(0,0,0,0.06);
+
+      transition:0.25s;
+    }
+
+    .back-btn:hover{
+      transform:translateY(-2px);
+    }
+
+    .hero{
+      width:100%;
+      max-width:1400px;
+
+      margin:auto;
+      margin-bottom:60px;
+    }
+
+    h1{
+      font-size:72px;
+
+      letter-spacing:-4px;
+
+      margin-bottom:20px;
+
+      line-height:0.95;
+    }
+
+    .subtitle{
+      font-size:22px;
+
+      color:#666;
+
+      max-width:700px;
+
+      line-height:1.6;
+    }
+
+    /* GRID */
+
+    .recipes-grid{
+      width:100%;
+      max-width:1400px;
+
+      margin:auto;
+
+      display:grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap:35px;
+    }
+
+    /* CARD */
+
+    .recipe-card{
+      background:rgba(255,255,255,0.82);
+
+      backdrop-filter:blur(10px);
+
+      border-radius:32px;
+
+      overflow:hidden;
+
+      box-shadow:
+        0 12px 35px rgba(0,0,0,0.06);
+
+      transition:0.3s;
+    }
+
+    .recipe-card:hover{
+      transform:
+        translateY(-8px)
+        scale(1.01);
+    }
+
+    .recipe-img{
+      width:100%;
+      height:240px;
+
+      object-fit:cover;
+    }
+
+    .recipe-content{
+      padding:26px;
+    }
+
+    .recipe-title{
+      font-size:30px;
+      font-weight:700;
+
+      margin-bottom:12px;
+    }
+
+    .recipe-text{
+      color:#666;
+
+      line-height:1.7;
+
+      margin-bottom:22px;
+
+      font-size:16px;
+    }
+
+    .recipe-tags{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+    }
+
+    .tag{
+      background:#fff0e6;
+
+      color:#ff6b3d;
+
+      padding:10px 16px;
+
+      border-radius:999px;
+
+      font-size:14px;
+      font-weight:600;
+    }
+
+    /* MOBILE */
+
+    @media(max-width:1100px){
+
+      .recipes-grid{
+        grid-template-columns:
+          repeat(2, 1fr);
+      }
+
+    }
+
+    @media(max-width:700px){
+
+      body{
+        padding:24px;
+      }
+
+      .topbar{
+        margin-bottom:40px;
+      }
+
+      .logo{
+        width:140px;
+      }
+
+      h1{
+        font-size:48px;
+      }
+
+      .subtitle{
+        font-size:18px;
+      }
+
+      .recipes-grid{
+        grid-template-columns:1fr;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- TOP -->
+
+  <div class="topbar">
+
+    <img src="logo-ingredia.jpg" class="logo">
+
+    <a href="index.html" class="back-btn">
+      Back Home
+    </a>
+
+  </div>
+
+  <!-- HERO -->
+
+  <div class="hero">
+
+    <h1>
+      Explore Recipes
+    </h1>
+
+    <div class="subtitle">
+      Find meals, snacks and desserts created from simple ingredients you already have at home.
+    </div>
+
+  </div>
+
+  <!-- RECIPES -->
+
+  <div class="recipes-grid">
+
+    <!-- CARD 1 -->
+
+    <div class="recipe-card">
+
+      <img
+        src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=1200&auto=format&fit=crop"
+        class="recipe-img"
+      >
+
+      <div class="recipe-content">
+
+        <div class="recipe-title">
+          Avocado Toast
+        </div>
+
+        <div class="recipe-text">
+          Crispy toast with avocado, egg and chili flakes.
+        </div>
+
+        <div class="recipe-tags">
+
+          <div class="tag">Snack</div>
+
+          <div class="tag">Savoury</div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- CARD 2 -->
+
+    <div class="recipe-card">
+
+      <img
+        src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=1200&auto=format&fit=crop"
+        class="recipe-img"
+      >
+
+      <div class="recipe-content">
+
+        <div class="recipe-title">
+          Chicken Bowl
+        </div>
+
+        <div class="recipe-text">
+          Rice, vegetables and grilled chicken with spicy sauce.
+        </div>
+
+        <div class="recipe-tags">
+
+          <div class="tag">Full Meal</div>
+
+          <div class="tag">Healthy</div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- CARD 3 -->
+
+    <div class="recipe-card">
+
+      <img
+        src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=1200&auto=format&fit=crop"
+        class="recipe-img"
+      >
+
+      <div class="recipe-content">
+
+        <div class="recipe-title">
+          Homemade Pizza
+        </div>
+
+        <div class="recipe-text">
+          Crispy pizza with mozzarella and basil.
+        </div>
+
+        <div class="recipe-tags">
+
+          <div class="tag">Full Meal</div>
+
+          <div class="tag">Savoury</div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- CARD 4 -->
+
+    <div class="recipe-card">
+
+      <img
+        src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1200&auto=format&fit=crop"
+        class="recipe-img"
+      >
+
+      <div class="recipe-content">
+
+        <div class="recipe-title">
+          Pancake Stack
+        </div>
+
+        <div class="recipe-text">
+          Fluffy pancakes with berries and maple syrup.
+        </div>
+
+        <div class="recipe-tags">
+
+          <div class="tag">Sweet</div>
+
+          <div class="tag">Dessert</div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- CARD 5 -->
+
+    <div class="recipe-card">
+
+      <img
+        src="https://images.unsplash.com/photo-1482049016688-2d3e1b311543?q=80&w=1200&auto=format&fit=crop"
+        class="recipe-img"
+      >
+
+      <div class="recipe-content">
+
+        <div class="recipe-title">
+          Berry Smoothie
+        </div>
+
+        <div class="recipe-text">
+          Fresh smoothie with berries, banana and yogurt.
+        </div>
+
+        <div class="recipe-tags">
+
+          <div class="tag">Snack</div>
+
+          <div class="tag">Sweet</div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- CARD 6 -->
+
+    <div class="recipe-card">
+
+      <img
+        src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?q=80&w=1200&auto=format&fit=crop"
+        class="recipe-img"
+      >
+
+      <div class="recipe-content">
+
+        <div class="recipe-title">
+          Creamy Pasta
+        </div>
+
+        <div class="recipe-text">
+          Rich creamy pasta with parmesan and garlic sauce.
+        </div>
+
+        <div class="recipe-tags">
+
+          <div class="tag">Full Meal</div>
+
+          <div class="tag">Comfort Food</div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
