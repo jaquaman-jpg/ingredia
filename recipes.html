@@ -18,29 +18,26 @@
       font-family:-apple-system,BlinkMacSystemFont,sans-serif;
 
       background:
-        radial-gradient(circle at top left,
-          rgba(255,140,70,0.18),
-          transparent 30%),
-
         linear-gradient(
           135deg,
-          #fff8f1,
-          #fff4eb
+          #fdf6ef,
+          #f8f1ea
         );
 
       color:#111;
 
       min-height:100vh;
 
-      padding:40px;
+      padding:40px 60px;
     }
 
+    /* TOPBAR */
+
     .topbar{
-      width:100%;
-      max-width:1400px;
+      max-width:1280px;
 
       margin:auto;
-      margin-bottom:70px;
+      margin-bottom:90px;
 
       display:flex;
       justify-content:space-between;
@@ -48,13 +45,13 @@
     }
 
     .logo{
-      width:180px;
+      width:170px;
     }
 
     .back-btn{
       background:white;
 
-      padding:14px 22px;
+      padding:16px 24px;
 
       border-radius:18px;
 
@@ -65,7 +62,7 @@
       font-weight:600;
 
       box-shadow:
-        0 5px 18px rgba(0,0,0,0.06);
+        0 8px 20px rgba(0,0,0,0.05);
 
       transition:0.25s;
     }
@@ -74,39 +71,38 @@
       transform:translateY(-2px);
     }
 
-    .hero{
-      width:100%;
-      max-width:1400px;
+    /* HERO */
 
-      margin:auto;
-      margin-bottom:60px;
+    .hero{
+      text-align:center;
+
+      margin-bottom:80px;
     }
 
     h1{
-      font-size:72px;
+      font-size:82px;
 
       letter-spacing:-4px;
 
-      margin-bottom:20px;
-
-      line-height:0.95;
+      margin-bottom:24px;
     }
 
     .subtitle{
-      font-size:22px;
+      font-size:26px;
+
+      line-height:1.5;
 
       color:#666;
 
-      max-width:700px;
+      max-width:760px;
 
-      line-height:1.6;
+      margin:auto;
     }
 
     /* GRID */
 
     .recipes-grid{
-      width:100%;
-      max-width:1400px;
+      max-width:1280px;
 
       margin:auto;
 
@@ -115,37 +111,36 @@
       grid-template-columns:
         repeat(3, 1fr);
 
-      gap:35px;
+      gap:36px;
     }
 
     /* CARD */
 
     .recipe-card{
-      background:rgba(255,255,255,0.82);
+      background:#ffffff;
 
-      backdrop-filter:blur(10px);
-
-      border-radius:32px;
+      border-radius:34px;
 
       overflow:hidden;
 
-      box-shadow:
-        0 12px 35px rgba(0,0,0,0.06);
-
       transition:0.3s;
+
+      box-shadow:
+        0 12px 35px rgba(0,0,0,0.05);
     }
 
     .recipe-card:hover{
       transform:
-        translateY(-8px)
-        scale(1.01);
+        translateY(-8px);
     }
 
     .recipe-img{
       width:100%;
-      height:240px;
+      height:260px;
 
       object-fit:cover;
+
+      display:block;
     }
 
     .recipe-content{
@@ -153,7 +148,7 @@
     }
 
     .recipe-title{
-      font-size:30px;
+      font-size:22px;
       font-weight:700;
 
       margin-bottom:12px;
@@ -162,7 +157,7 @@
     .recipe-text{
       color:#666;
 
-      line-height:1.7;
+      line-height:1.6;
 
       margin-bottom:22px;
 
@@ -171,14 +166,14 @@
 
     .recipe-tags{
       display:flex;
-      flex-wrap:wrap;
       gap:10px;
+      flex-wrap:wrap;
     }
 
     .tag{
-      background:#fff0e6;
+      background:#fff2e8;
 
-      color:#ff6b3d;
+      color:#ff7a45;
 
       padding:10px 16px;
 
@@ -197,6 +192,10 @@
           repeat(2, 1fr);
       }
 
+      h1{
+        font-size:62px;
+      }
+
     }
 
     @media(max-width:700px){
@@ -205,12 +204,8 @@
         padding:24px;
       }
 
-      .topbar{
-        margin-bottom:40px;
-      }
-
-      .logo{
-        width:140px;
+      .recipes-grid{
+        grid-template-columns:1fr;
       }
 
       h1{
@@ -221,8 +216,12 @@
         font-size:18px;
       }
 
-      .recipes-grid{
-        grid-template-columns:1fr;
+      .topbar{
+        margin-bottom:50px;
+      }
+
+      .logo{
+        width:140px;
       }
 
     }
@@ -278,7 +277,7 @@
         </div>
 
         <div class="recipe-text">
-          Crispy toast with avocado, egg and chili flakes.
+          Crispy toast with avocado and egg.
         </div>
 
         <div class="recipe-tags">
@@ -309,7 +308,7 @@
         </div>
 
         <div class="recipe-text">
-          Rice, vegetables and grilled chicken with spicy sauce.
+          Rice, vegetables and grilled chicken.
         </div>
 
         <div class="recipe-tags">
@@ -371,7 +370,7 @@
         </div>
 
         <div class="recipe-text">
-          Fluffy pancakes with berries and maple syrup.
+          Fluffy pancakes with berries and syrup.
         </div>
 
         <div class="recipe-tags">
@@ -402,7 +401,7 @@
         </div>
 
         <div class="recipe-text">
-          Fresh smoothie with berries, banana and yogurt.
+          Fresh smoothie with berries and banana.
         </div>
 
         <div class="recipe-tags">
@@ -433,7 +432,7 @@
         </div>
 
         <div class="recipe-text">
-          Rich creamy pasta with parmesan and garlic sauce.
+          Creamy parmesan pasta with garlic sauce.
         </div>
 
         <div class="recipe-tags">
