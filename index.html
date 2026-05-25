@@ -459,13 +459,17 @@
       <div class="input-box">
 
         <input
-          type="text"
-          placeholder="Eggs, cheese, tomatoes..."
-        >
+  type="text"
+  id="ingredientsInput"
+  placeholder="Eggs, cheese, tomatoes..."
+>
 
-        <button class="generate-btn">
-          Generate Recipe
-        </button>
+        <button
+  class="generate-btn"
+  id="generateBtn"
+>
+  Generate Recipe
+</button>
 
       </div>
 
@@ -527,7 +531,7 @@
     button.addEventListener("click", () => {
 
       const ingredients =
-        document.querySelector("input").value;
+        document.querySelector("ingredientsInput").value;
 
       localStorage.setItem(
         "ingredients",
