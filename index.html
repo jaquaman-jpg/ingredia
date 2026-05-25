@@ -430,9 +430,9 @@
 
     <img src="finales-Logo.png" class="nav-logo">
 
-    <a href="recipes.html" class="nav-btn">
-      Explore Recipes
-    </a>
+    <button class="generate-btn" id="generateBtn">
+  Generate Recipe
+</button>
 
   </div>
 
@@ -518,6 +518,28 @@
     </div>
 
   </section>
+
+  <script>
+
+    const button =
+      document.getElementById("generateBtn");
+
+    button.addEventListener("click", () => {
+
+      const ingredients =
+        document.querySelector("input").value;
+
+      localStorage.setItem(
+        "ingredients",
+        ingredients
+      );
+
+      window.location.href =
+        "generator.html";
+
+    });
+
+  </script>
 
 </body>
 </html>
