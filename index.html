@@ -415,7 +415,7 @@
 
     }
 
-  </style>
+ </style>
 </head>
 
 <body>
@@ -425,14 +425,14 @@
   <div class="blob blob2"></div>
   <div class="blob blob3"></div>
 
-  <!-- NAV -->
+  <!-- NAVBAR -->
   <div class="navbar">
 
     <img src="finales-Logo.png" class="nav-logo">
 
-    <button class="generate-btn" id="generateBtn">
-  Generate Recipe
-</button>
+    <a href="recipes.html" class="nav-btn">
+      Explore Recipes
+    </a>
 
   </div>
 
@@ -459,17 +459,17 @@
       <div class="input-box">
 
         <input
-  type="text"
-  id="ingredientsInput"
-  placeholder="Eggs, cheese, tomatoes..."
->
+          type="text"
+          id="ingredientsInput"
+          placeholder="Eggs, cheese, tomatoes..."
+        >
 
         <button
-  class="generate-btn"
-  id="generateBtn"
->
-  Generate Recipe
-</button>
+          class="generate-btn"
+          id="generateBtn"
+        >
+          Generate Recipe
+        </button>
 
       </div>
 
@@ -523,6 +523,7 @@
 
   </section>
 
+  <!-- SCRIPT -->
   <script>
 
     const button =
@@ -531,7 +532,7 @@
     button.addEventListener("click", () => {
 
       const ingredients =
-        document.querySelector("ingredientsInput").value;
+        document.getElementById("ingredientsInput").value;
 
       localStorage.setItem(
         "ingredients",
@@ -541,7 +542,6 @@
       window.location.href =
         "generator.html";
 
- 
     });
 
   </script>
