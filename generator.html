@@ -1,1 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>Ingredia Generator</title>
+
+  <style>
+
+    body{
+      font-family:-apple-system,BlinkMacSystemFont,sans-serif;
+
+      background:#fff8f2;
+
+      padding:60px;
+
+      color:#111;
+    }
+
+    h1{
+      font-size:58px;
+
+      margin-bottom:40px;
+    }
+
+    .ingredient{
+      background:white;
+
+      padding:20px;
+
+      border-radius:22px;
+
+      margin-bottom:20px;
+
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+
+      box-shadow:
+        0 8px 20px rgba(0,0,0,0.05);
+    }
+
+    .ingredient-name{
+      font-size:22px;
+      font-weight:600;
+    }
+
+    .ingredient-input{
+      padding:14px;
+
+      border:none;
+
+      background:#fff3ea;
+
+      border-radius:14px;
+
+      width:140px;
+
+      font-size:16px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <h1>
+    How much do you still have?
+  </h1>
+
+  <div id="ingredientsList"></div>
+
+  <script>
+
+    const ingredients =
+      localStorage.getItem("ingredients");
+
+    const list =
+      document.getElementById("ingredientsList");
+
+    if(ingredients){
+
+      const foods =
+        ingredients.split(",");
+
+      foods.forEach(food => {
+
+        list.innerHTML += `
+
+          <div class="ingredient">
+
+            <div class="ingredient-name">
+              ${food.trim()}
+            </div>
+
+            <input
+              class="ingredient-input"
+              placeholder="e.g. 200g"
+            >
+
+          </div>
+
+        `;
+
+      });
+
+    }
+
+  </script>
+
+</body>
+</html>
